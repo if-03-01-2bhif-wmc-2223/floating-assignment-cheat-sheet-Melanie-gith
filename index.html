@@ -1,18 +1,323 @@
-<!doctype html>
-<html>
-  <head>
-     <title>Floating Assignment - YOUR TITLE HERE</title>
-  </head>
-  <body>
-    <h1>Floating Assignment - Cheat Sheet<h1>
-      <p>This is a (very ugly) placeholder page for your WMC cheat sheet.
-        You can use it in any way suitable to fulfil your task.</p>
-      <ul>
-        This includes:
-        <li>Modify this file as needed</li>
-        <li>Replace the content of this file with your cheat sheet</li>
-        <li>Use it as overview page that links to separate pages for each topic</li>
-        <li>Add a menu bar</li>
-      </ul>
-  </body>
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cheat Sheet</title>
+        <style>
+            #toc_container {
+                background: white none repeat scroll 0 0;
+                border: 1px solid #aaa;
+                font-size: 95%;
+                padding: 2%;
+                width:auto;
+                font-family: Arial;
+                text-align: left;
+            }
+            .toc_title {
+                font-family:Arial;
+                font-size: 100%;
+                text-align: left;
+            }
+            h3 {
+                font-family:Arial;
+            }
+            h4{
+                font-family:Arial;
+            }
+            p{
+                font-family:Arial;
+            }
+            em{
+                font-family:Arial;
+            }
+            pre{
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toc_container">
+            <p class="toc_title">Contents</p>
+            <li><a href="#1. WWW">1.1. WWW</a>
+            <li><a href="#2. URL">1.2. URL</a></li>
+            <li><a href="#3. Web Server">1.3. Web Server</a></li>
+            <li><a href="#4. Web Client">1.4. Web Client</a></li>
+            <li><a href="#5. HTML">1.5. HTML</a></li>
+            <li><a href="#1. HTML Basic Tags">2.1. HTML Basic Tags</a></li>
+            <li><a href="#2. HTML Elements">2.2. HTML Knowledge about Elements</a></li>
+            <li><a href="#3. HTML Attributes">2.3. HTML Attributes</a></li>
+            <li><a href="#4. HTML Headings and Paragraphs">2.4. Headings and Paragraphs</a></li>
+            <li><a href="#5. HTML Comments and Links">2.5. HTML Comments and Links</a></li>
+            <li><a href="#6. HTML Images">2.6. HTML Images</a></li>
+            <li><a href="#7. HTML Head Element">2.7. HTML Head Element</a></li>
+            <li><a href="#8. CSS Syntax">3.1. CSS Syntax, Selectors and Comments</a></li>
+            <li><a href="#9. CSS Colors">3.2. CSS Colors and Background</a></li>
+            <li><a href="#10. CSS Text">3.3. Text and Fonts</a></li>
+            <li><a href="#11. CSS Link">3.4. Link and Combinators</a></li>
+            <li><a href="#12. CSS Pseudo-classes">3.5. CSS Pseudo-classes</a></li>
+            <li><a href="#13. HTML Lists">4.1. HTML Lists</a></li>
+            <li><a href="#14. CSS for Lists">4.2. CSS for Lists</a></li>
+            <li><a href="#15. HTML for Tables">4.3. HTML for Tables</a></li>
+            <li><a href="#16. CSS for Tables">4.4. CSS for Tables</a></li>
+        </div>
+        <h3>Cheat Sheet; from Melanie Dohr</h3>
+        <h4 id = "1. WWW">Three essential technologies for the WWW</h4>
+        <p>
+            1. URL (Uniform Resource Locator) = Address of a given unique resource on the Web. <br>
+            2. HTML = publishing language <br>
+            3. HTTP = Hytertext Transfer Protocol = Protocol for fetching resources such as HTML documents.
+        </p>
+        <h4 id = "2. URL">URL</h4>
+        <p>
+            A Uniform Resource Locator describes the <b>specific location</b> of a resource on a particular server.<br>
+            It tells you exactly how to fetch a resource from a precise, fixed location. <br>
+            A URL is a specific type of URI (Uniform Resource Identifier). <br>
+            Most commonly URLs refferences to web pages (HTTP), but are also used for file transfer (FTP), email (mailto), database access (JDBC) etc. <br>
+        </p>
+        <p>
+            A URL is composed from an allowed set of <b>ASCII characters</b> consisting of reserved characters and unreserved characters and the character %.<br><br>
+            A typical URL contains <br>
+            1. A <b>scheme</b> that identifies the protocol to be used to access the ressource on the Internet, it can be HTTP or HTTPS. <br>
+            2. A <b>host</b> The hostname identifies the host of the roesource (e. g. www.example.com). <br>
+            3. A <b>path</b> <br>
+            4. A <b>query string</b>, it follows the path and provides a string of information.
+        </p>
+        <h4 id = "3. Web Server">Web Server</h4>
+        <p>
+            A web server is computer software and underlying hardware that accepts requests via HTTP.<br>
+            A web browser or web crawler makes a <b>request</b> for a ressource (e. g. web page) using HTTP.<br>
+            The server <b>responds</b> with the content of the resorce or an error message. (describe)<br>
+            A web server can also accept and store resources sent from the user agent.
+        </p>
+        <p>
+            Embedded systems are the smallest web servers, e. g. a router that runs one as its configuration interface.<br>
+            A high-traffic website might handle request with hundreds of servers.<br>
+            A resource sent from a web server can be a <b>preexisting</b> file (static content) or it can be <b>generated</b> by the time of request (dynamic content) by another program.
+        </p>
+        <h4 id = "4. Web Client">Web Client (Web Browser; User Agent)</h4>
+        <p>
+            A web browser accesses the World Wide Web or a local website.
+            The web browser <b>retrieves</b> the requested web page files from a web server and then <b>graphically renders</b> the page on the user's screen. <br>
+        </p>
+        <p>A search engine is not a Web Browser! It provides links to other websites.</p>
+        <h4 id = "5. HTML">HTML</h4>
+        <p>All HTML documents must start with a <b>!DOCTYPE</b> declaration; it tells the browser what document to expect.</p>
+        <p>
+            The <b>body</b> element contains all the contents of an HTML document.<br>
+            The <b>head</b> element is a container for <b>metadata</b> (data about data). <br>
+            Metadata is about the HTML document; it's about the style, character set, scripts, etc.<br>
+            The <b>em</b> element is for emphasized text; f.e.: <em>example</em><br>
+            The <b>html</b> tag is the container for all other HTML elements (except for !DOCTYPE tag).<br>
+            The <b>strong</b> tag is to define important text in a document. It is displayed in <b>bold</b>.<br>
+            The <b>title</b> tag defines the title of the document. It is required in HTML documents.
+        </p>
+        <h3>2. Cheat Sheet; from Melanie Dohr</h3>
+        <h3>HTML</h3>
+        <h4 id = "1. HTML Basic Tags">2.1. HTML Basic Tags</h4>
+        <p>All HTML documents must start with a <b><code>&lt;!DOCTYPE html&gt;</code></b> declaration; it tells the browser what document to expect.</p>
+        <p>
+            The <b>article</b> tag is for independent, self-contained content<br>
+            The <b>html</b> tag is the container for all other HTML elements (except for !DOCTYPE tag).<br>
+            The <b>body</b> element contains the visible part of an HTML document.<br>
+            The <b>em</b> element is for emphasized text; f.e.: <em>example</em><br>
+            The <b>section</b> tag defines a section in a document
+            The <b>strong</b> tag is to define important text in a document. It is displayed in <b>bold</b>.<br><br>
+            The <b>a</b> tag is for links, e.g.: <code>&lt;a&gt; href="https://www.w3schools.com">This is a link&lt;/a&gt;</code><br>
+        </p>
+        <h4 id = "2. HTML Elements">2.2. HTML Knowledge about Elements</h4>
+        <p>
+            A HTML element contains of a start tag, the element itself and an end tag.<br>
+            There are also void HTML Elements = doesn't contain any content; e.g.: <code>&lt;br&gt;</code>; it defines a line break<br>
+            HTML is not Case Sensitive, you can mark a paragraph with P and with p<br>
+        </p>
+        <h4 id = "3. HTML Attributes">2.3. HTML Attributes</h4>
+        <p>
+            HTML <b>attributes</b> provide additional information about HTML elements<br>
+            The <b>href</b> attribute specifies the URL of the page the link (with a tag) goes to.<br>
+            The <b>style</b> attribute: to add styles<br>
+            The <b>lang</b> attribute (of the html tag): declares language of the Web page<br>
+            The <b>title</b> attribute defines extra information about an element<br>
+            e.g.: <code>&lt;p title="John 'ShotGun' Nelson"&gt;</code><br>
+        </p>
+        <h4 id="4. HTML Headings and Paragraphs">2.4. HTML Headings and Paragraphs</h4>
+        <p>
+            The <b>h1</b> tag defines a heading, headings are h1 to h6 tags.<br>
+            Note: I will continue to use the br Tag because it is more comfortable to read without the white spaces.<br>
+            The <b>p</b> tag defines a paragraph, browsers add some white space before and after it.<br>
+            The <b>hr</b> tag defines a horizontal line between the content<br>
+            The <b>br</b> tag defines a line break.<br>
+            <pre>The <b>pre</b> tag defines a preformatted text. e.g.: this text with blue in style</pre>
+        </p>
+        <h4 id="5. HTML Comments and Links">2.5. HTML Comments and Links</h4>
+        <p>
+            The <b>comment</b> tag: e.g.: <code>&lt;!-- text as a comment --&gt;</code><br>
+            The <b>a</b> tag defines a hyperlink; e.g.: <code>&lt;a&gt; href="https://www.google.com">Visit google!&lt;/a&gt;</code><br>
+            The <b>target</b> attribute can be used so that the link won't open on the current browser window.<br>
+            It can have one of these values:<br>
+            _self: default; opens it in same window/tab<br>
+            _blank: opens it in new winow / tab<br>
+            _parent: opens it in parent frame<br>
+            _top: opens it in the full body of the window<br>
+            There is an <b>absolute</b> URL and a <b>relative</b> URL (relative: does not include domain name)<br>
+            The <b>'mailto:'</b> tag: to open a link to open a mail adress with a mail program<br>
+            The <b>button</b> tag: to use an HTML button as link (has to be with JavaScript code!)<br>
+            The <b>title</b> tag: extra information, shows when the mouse moves over it.
+        </p>
+        <h4 id="6. HTML Images">2.6. HTML Images</h4>
+        <p>
+            The <b>img</b> tag is for images on a HTML page; the src attribute specifies the path<br>
+            If the image is in <b>another folder</b>, the folder name must be included in the src.<br>
+            If the image is on <b>another server</b> / website, the absolute URl must be included in the src.<br> 
+            e.g.: <code>&lt;img src="img_girl.jpg"&gt;</code><br>
+            The <b>alt</b> attribute for the image contains the alternate text for an image if it can't get displayed.<br>
+            The <b>width</b> and <b>height</b> attributes: e.g.: <code>&lt;src="img_girl.jpg"  width="500" height="600"&gt;</code><br>
+            <b>Image as Link</b>: just put the img tag inside the a tag.<br>
+        </p>
+        <h4 id="7. HTML Head Element">2.7. HTML Head Element</h4>
+        <p>
+            The <b>head</b> element is a container for <b>metadata</b> (data about data). <br>
+            Metadata is about the HTML document; it's about the style, character set, scripts, etc.<br>
+            The <b>title</b> tag defines the title of the document. It is required in HTML documents.<br>
+            1) it defines a title in the toolbar<br>
+            2) it provides a title for the favorits<br>
+            3) title of the search enginge-results<br>
+            The <b>meta</b> tag specifies the character set, description, keywords, author of the web and viewport settings.<br>
+            It won't be displayed on the page, but is used by browsers, by search engines and other web services.<br>
+            <code>&lt;head&gt;<br>
+                &lt;meta charset="UTF-8"&gt;<br>
+                &lt;title>2. Cheat Sheet&lt;/title&gt;<br>
+                &lt;/head></code>
+        </p>
+        <hr>
+        <h3>CSS</h3>
+        <h4 id="8. CSS Syntax">3.1. CSS Syntax, Selectors and Comments</h4>
+        <p>
+            <img src = "CSS.png" width="300"><br>
+            <b>selector</b>: points to the HTML element to style<br>
+            <b>declaration</b>: declarations separated by ;<br>
+            <b>element selector</b>: selects Html elements based on the element name<br>
+            <b>grouping selector</b>: groups selectors to minimize code; e.g.: h1, h2, p { style}<br>
+            <b>comments</b>: with /* and */ <br>
+        </p>
+        
+        <h4 id="9. CSS Color">3.2. CSS Color and Background</h4>
+        <p>
+            <b>color Names</b>: there are perdefined color names in CSS e.g.: <br><code>&lt;h1 style="color:Tomato">test&lt;/h1></code><br>
+            <b>Hexadecimal</b>: #rrggbb (red, etc. in HEX; 00 and ff (0-255)) e.g.: <br>
+            <code>&lt;h1 style="background-color:#ff6347;">test&lt;/h1&gt;</code><br>
+            <b>background</b>: e.g.:background-color: lightblue = set background color of an element<br>
+            <b>image as background</b>: e.g.: background.image: url("paper.gif");<br>
+            <b>repeat background</b>: horizontally: background-repeat: repeat-x;<br>
+            vertically: -y; no repeat: background-repeat: no-repeat;<br>
+            <b>background position</b>: e.g.: background-position: right top;
+        </p>
+        <h4 id="10. CSS Text">3.3. CSS Text and Fonts</h4>
+        <p>
+            <b>text color</b>: e.g.: color: blue;<br>
+            <b>text allign</b>: e.g.: text-align: center;<br>
+            <b>text decoration</b>: e.g.: text-decoration-line: underline; (-color, -style, -thickness)<br>
+            shorthand property: text-decoration; e.g.: text-decoration: underline red double;<br>
+            <b>text transformation</b>: capitalization of text; e.g.: text-transform: uppercase;<br>
+            <b>Serif</b>: small stroke at edges of letter: for formality and elegance<br>
+            <b>Sans-serif</b>: without it, clean lines: for modern and minimalistic look<br>
+            <b>font-family</b>: font of text and if it is not available, let browser pick similar from same family; e.g.: font-family:'Courier New', Courier, Monospace</e><br>
+            <b>font-style</b>: e.g.: font-style: italic;<br>
+            <b>font-size</b>: e.g.: font-size: 40px; (with pixels) font-size: 2.5 em; (with em, to adjust size in all browsers)<br>
+            <b>font-weight</b>: how thin / thick characters are, e.g.: font-weight: bold;
+        </p>
+        <h4 id="11. CSS Link">3.4. CSS Link and Combinators</h4>
+        <p>
+            <b>Link Color</b>: style links; e.g.: a {color: hotpink;}; four link states: <br>
+            a:link - normal, univisited; a:visited; a:hover - when mouse moves over; a:active: moment when clicked<br>
+            <b>All CSS Combinator Selectors</b>:<br>
+            1. element element; e.g.: div p; selects all p elements inside div elements = <b>descendant selector</b><br>
+            2. element>element; e.g.: div > p; selects all p element where the (direct) parent is a div element = <b>child selector</b><br>
+            3. element+element; e.g.: div + p; selects the first p element that are placed immediately after div elements = <b>adjacent sibling selector</b><br>
+            4. element~element; p ~ ul: selects every ul element that are preceded by a p element = <b>general sibling selector</b><br>
+            e.g.: div p { background-color: yellow; }
+        </p>
+        <h4 id="12. CSS Pseudo-classes">3.5. CSS Pseudo-classes</h4>
+        <p>
+            <b>Pseudo classes</b>: define a special state of an element;(=style element under certain conditions) <br>
+            e.g.: style an element when the mouse moves over; Syntax: <br>
+            selector:pseudo-class {<br>
+                property: value;<br>
+            }<br>
+            <b>Anchor Pseudo-classes</b>: links can be displayed in different ways: e.g.:<br>
+            a: link { /* univisited link */ <br>
+                color: #FF000;<br>
+            }<br>
+            <b>Hover on div</b>: changes color of element when hovers - example:<br>
+            div:hover {<br>
+                background-color: blue;<br>
+            }<br>
+            <b>:first-child</b>: it matches a specified element that is the first child of another element
+        </p>
+        <hr>
+        <h4 id="13. HTML Lists">4.1. HTML Lists</h4>
+        <p>
+            <ul><li><b>unordered</b> list: ul</li></ul> syntax: ul/ol and content inside of li tags
+            <ol><li><b>ordered</b> list: ol</li></ol>
+            <b>description</b> list:dl</dl><br>
+            <code>&lt;dl&gt;<br>
+                &lt;dt&gt;Coffee<br>
+                &lt;dt&gt;- black hot drink&lt;/dd&gt;<br>
+                &lt;dl&gt;
+            </code>
+        </p>
+        <p>
+            <b>nested</b> list: you can make a list inside a list
+        </p>
+        <h4 id="14. CSS for Lists">4.2. CSS for Lists</h4>
+        <p>
+            <b>Different Item Markers</b>: list-style-type: circle/square[ul]; upper-roman:[ol]<br>
+            <b>Image as Item Marker</b>: list-style-image: url('sqpurple.gif');<br>
+            <b>Position The Item Marker</b>: list-style-position: outside [of the list] / inside<br>
+            <b>Remove Default Settings</b>: list-style-type:none; margin: 0; padding: 0; [to remove all settings]
+        </p>
+        <h4 id="15. HTML for Tables">4.3. HTML for Tables</h4>
+        <p>
+            defintion: <br>
+            <code>&lt;table> <br>
+                    &lt;tr><br>
+                        &lt;th>Country&lt;/th><br>
+                        &lt;th>Company&lt;/th><br>
+                    &lt;tr><br>
+                    &lt;td>Germany&lt;/td><br>
+                    &lt;td>Volkswagen&lt;/td><br>
+                    &lt;/tr><br>
+                    &lt;/table>
+            </code>
+            <table>
+                <tr>
+                    <th>Country</th><th>Company</th></tr>
+                <tr><td>Germany</td><td>Volkswagen</td></tr>
+            </table>
+        </p>
+        <p>
+            <b>td</b>: defines a cell<br>
+            <b>th</b>: defines a header cell<br>
+            <b>tr</b>: defines a row<br>
+            <b>thead</b>: groups head content
+            <b>tbody</b>: groups body content<br>
+            <b>tfoot</b>; groups footer content<br>
+            <b>colspan</b>: attribute that defines the number of columns a cell should span<br>
+            <b>rowspan</b>: to make a cell span over multiple rows<br>
+            <b>caption</b>: tag to insert a caption to a table
+        </p>
+        <h4 id="16. CSS for Tables">4.4. CSS for Tables</h4>
+        <p>
+           <b>border</b>: to specify table borders<br>
+           <b>border-collapse</b>: to set if the table borders should collapse into a single border or be seperated (standard)<br>
+           <b>width: 100%</b>: to set width of table<br>
+           <b>height</b>: to set height of table<br>
+           <b>border: 1 px solid</b>: for just one border around the table<br>
+           <b>border-style</b>: property for border, e.g.: dotted<br>
+            <b>border-width</b>: e.g.: solid<br>
+            <b>border-color</b>: e.g.: red<br>
+            <b>border-right-style: dotted</b>: individual slide; right border is dotted<br>
+            <b>shorthand property</b>: border is a shorthand property for border-width, border-color and border-style<br>
+            <b>rounded borders</b>: e.g. border-radius: 5 px;
+        </p>
+    </body>
 </html>
