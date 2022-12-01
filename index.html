@@ -59,6 +59,10 @@
             <li><a href="#14. CSS for Lists">4.2. CSS for Lists</a></li>
             <li><a href="#15. HTML for Tables">4.3. HTML for Tables</a></li>
             <li><a href="#16. CSS for Tables">4.4. CSS for Tables</a></li>
+            <li><a href="#17. Class Selector">5.1. CSS .class Selector</a></li>
+            <li><a href="#18. ID Selector">5.2. CSS #id Selector</a></li>
+            <li><a href="#19. CSS Box Model">5.3. CSS Box Model</a></li>            
+            <li><a href="#20. Float">5.4. CSS Layout: Float</a></li>
         </div>
         <h3>Cheat Sheet; from Melanie Dohr</h3>
         <h4 id = "1. WWW">Three essential technologies for the WWW</h4>
@@ -318,6 +322,64 @@
             <b>border-right-style: dotted</b>: individual slide; right border is dotted<br>
             <b>shorthand property</b>: border is a shorthand property for border-width, border-color and border-style<br>
             <b>rounded borders</b>: e.g. border-radius: 5 px;
+        </p>
+        <hr>
+        <h3>CSS Advanced</h3>
+        <h4 id="17. Class Selector">5.1. CSS .class Selector</h4>
+        <p>Select and styles all elements with class="intro"<br>
+           .intro {<br>
+            &emsp;background-color: yellow;<br>
+           }<br>
+        </p>
+        <p>Style all p elements with class="hometown":<br>
+            p.hometown {<br>
+            &emsp;background-color: yellow;<br>
+            }
+        </p>
+        <p>Style p element according to class="center" AND to class="large"<br>
+           <code>&lt;p class="center large"&gt;This refers to two classes&lt;/p&gt;</code>
+        </p>
+        <h4 id="18. ID Selector">5.2. CSS #id Selector</h4>
+        <p> Style the element with this exact ID:<br>
+            #id {<br>
+            &emsp;<i>css declarations</i><br>
+            }<br>
+        </p>
+        <h4 id="19. CSS Box Model">5.3. CSS Box Model</h4>
+        <img src="CSSBox.png" width="30%">
+        <p>
+            <b>Block element</b>: starts new line; browsers add space before and after; takes full width; e.g.: p / div element<br>
+            <b>Inline element</b>: does not start new line; takes only as much width as necessary; e.g.: span element<br>
+            Content = content of box with text and images<br>
+            Padding = clears an area around the content; transparent<br>
+            Border = goes around the padding and content<br>
+            Margin = clears area outside the border = space before and after; transparent<br>
+        </p>
+        <p><b>Demonstration of the box model:</b><br>
+            div {<br>
+                &emsp;width: 300px;<br>
+                &emsp;border: 15px solid green;<br>
+                &emsp;padding: 50px;<br>
+                &emsp;margin: 20px;<br>
+            }
+        </p>
+        <h4 id="20. Float">5.4. CSS Layout: Float</h4>
+        <p>
+            <b>The css float property</b> specifies how an element should float.<br>
+            It is used for positioning and formatting content.<br>
+            It can have one of these values:<br>
+            <ul>
+                <li>left: element floats to the left of its container (can be also used to let elements float next to each other)</li>
+                <li>right: element floats to the right of its container</li>
+                <li>none: element does not float (will be displayed where it occurs in the text)</li>
+                <li>inherit: element inherits the float value of its parent (=Vererbung)</li>
+            </ul><br>
+        </p>
+        <p>
+            e.g.:<br>
+            img {<br>
+            &emsp;float: left;<br>
+              }
         </p>
     </body>
 </html>
