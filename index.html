@@ -18,11 +18,39 @@
                 font-size: 100%;
                 text-align: left;
             }
-            h3, h4, p, em, ul {
+            body {
                 font-family:Arial;
             }
             pre{
                 color:blue;
+            }
+            li {
+                list-style: none;
+            }
+            div {
+                transition-property: opacity, left, top, width;
+                transition-duration: 2s, 1s;
+            }
+            #grad {
+                background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+            }
+            #shadow {
+                color: white;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+            #translat {
+                width: 50px;
+                background-color: darkblue;
+                transform: rotate(-20deg);
+            }
+            #trans3d {
+                transform: rotateX(150deg);
+            }
+            #transition {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s;
             }
         </style>
     </head>
@@ -55,6 +83,12 @@
             <li><a href="#19. CSS Box Model">5.3. CSS Box Model</a></li>            
             <li><a href="#20. Float">5.4. CSS Layout: Float</a></li>
             <li><a href="#21. Graphic Formats">6.1. Graphic Formats</a></li>
+            <li><a href="#22. Gradients">7.1. Graphic Formats</a></li>
+            <li><a href="#23. Borders">7.2. Borders</a></li>
+            <li><a href="#24. Shadows">7.3. Shadows</a></li>
+            <li><a href="#25. Transformations">7.4. Transformations</a></li>
+            <li><a href="#26. Transitions">7.5. Transitions</a></li>
+            <li><a href="#27. Animations">7.6. Animations</a></li>
         </div>
         <h3>Cheat Sheet; from Melanie Dohr</h3>
         <h4 id = "1. WWW">Three essential technologies for the WWW</h4>
@@ -383,6 +417,70 @@
                 <li>svg: for vector graphics; motion support; lossless compression</li>
                 <li>mpg / mp4: for videos, motion support; lossy format</li>
             </ul>
+        </p>
+        <hr>
+        <h4 id="22. Gradients">7.1. Gradients</h4>
+        <p>
+            Gradients are a way to create smooth transitions between two or more colors. <br>
+            Gradients are created using the <code>background-image</code> property. <br>
+            The <code>linear-gradient()</code> function can take directions. <br>
+        </p>
+        <div id="grad">
+            Beautiful<br><br>
+        </div>
+        <h4 id="23. Borders">7.2. Borders</h4>
+        <p>
+            <b>border-radius:</b> setting all the four border-*-*-radius properties<br>
+            <b>border-top-left-radius:</b> shape of the border of the top-left corner<br>
+            <b>border-top-right-radius:</b> shape of the border of the top-right corner<br>
+            <b>border-bottom-right-radius:</b> shape of the border of the bottom-right corner<br>
+            <b>border-bottom-left-radius:</b> shape of the border of the bottom-left corner
+        </p>
+        <h4 id="24. Shadows">7.3. Shadows</h4>
+        <h4 id="shadow">Test shadow beautiful</h4>
+        <h4 id="25. Transformations">7.4. Transformations</h4>
+        <h5>2D Transform</h5>
+        <p>
+            <b>transform:</b> Applies a 2D or 3D transformation to an element<br>
+            <b>transform-origin:</b> change the position on transformed elements
+        </p>
+        <p>
+            <b>matrix(n,n,n,n,n,n):</b> 2D transformation, using a matrix of six values<br>
+            <b>translate(x,y):</b> 2D translation, moving the element along the X- and the Y-axis<br>
+            <b>translateX(n):</b> 2D translation, moving the element along the X-axis<br>
+            <b>translateY(n):</b> 2D translation, moving the element along the Y-axis<br>
+            <b>scale(x,y):</b> 2D scale transformation, changing the elements width and height<br>
+            <b>scaleX(n):</b> 2D scale transformation, changing the element's width<br>
+            <b>scaleY(n):</b> 2D scale transformation, changing the element's height<br>
+            <b>rotate(angle):</b> 2D rotation, the angle is specified in the parameter<br>
+            <b>skew(x-angle,y-angle):</b> 2D skew transformation along the X- and the Y-axis<br>
+            <b>skewX(angle):</b> 2D skew transformation along the X-axis<br>
+            <b>skewY(angle):</b> 2D skew transformation along the Y-axis
+        </p>
+        <h4 id="translat">Beautiful 2D</h4>
+        <h5>3D Transform</h5>
+        <h4 id="trans3d">Beautiful 3D</h4>
+        <h4 id="26. Transitions">7.5. Transitions</h4>
+        <p>
+            <b>transition:</b> setting the four transition properties into a single property<br>
+            <b>transition-delay:</b> delay (in seconds) for the transition effect<br>
+            <b>transition-duration:</b> time a transition effect takes to complete<br>
+            <b>transition-property:</b> name of the CSS property the transition effect is for<br>
+            <b>transition-timing-function:</b> speed curve of the transition effect
+        </p>
+        <h4 id="transition">Test<br>beautiful</h4>
+        <h4 id="27. Animation">7.6. Animations</h4>
+        <p>
+            <b>keyframes: </b> animation code<br>
+            <b>animation:</b> set all the animation properties<br>
+            <b>animation-delay:</b> delay for the start of an animation<br>
+            <b>animation-direction:</b> how the animation should be played<br>
+            <b>animation-duration:</b> how long time an animation should take to complete one cycle<br>
+            <b>animation-fill-mode:</b> style for the element when the animation is not playing<br>
+            <b>animation-iteration-count:</b> number of times an animation should be played<br>
+            <b>animation-name:</b> name of the @keyframes animation<br>
+            <b>animation-play-state:</b> whether the animation is running or paused<br>
+            <b>animation-timing-function:</b> speed curve of the animation
         </p>
     </body>
 </html>
